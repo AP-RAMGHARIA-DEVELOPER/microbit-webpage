@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Document</title>
+    <title>Microbit MIDI</title>
 </head>
 
 
        <div class="f-box row">
        <img class="midi-logo col s4 l2" src="./img/MIDI.png" alt="midi logo"/>
-       <img class="m-logo col s7 l7" src="./img/microbitLogoWhite 1.png" alt="main logo"/>
+       <img class="m-logo col s7 l7" src="./img/microbitLogoWhite1.png" alt="main logo"/>
      </div>
 
 
@@ -20,10 +20,16 @@
     <div class="row">
 
         <div class="col s6 l6 push-l2">
-        
-        <img class="hex-img cl6" src="./img/hex 1.png" alt="hex logo logo"/>
-        <img class="pdf-img l6" src="./img/pdf-file 1.png" alt="pdf file logo"/>
-        <img class="github-img l6" src="./img/github 1.png" alt="github logo"/>
+            <a href="./microbit-MiIDI-Controller.hex">
+                <img class="icon-logo l6" src="./img/hex1.png" alt="hex logo logo"/>
+            </a>
+            
+            <a href="./ProposalMicrobit.pdf">
+                <img class="icon-logo l6" src="./img/pdf-file1.png" alt="pdf file logo"/>
+            </a>
+            <a href="https://github.com/AP-RAMGHARIA-DEVELOPER/microbit-webpage">
+                <img class="icon-logo l6" src="./img/github1.png" alt="github logo"/>
+            </a>
 
     </div>
         <p class="f-para col s6 l6 push-l1">
@@ -49,8 +55,10 @@
     </div> 
     
     
-    <div class=" video-box"></div>
-    
+    <div class=" video-box">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xYR4bAIq1Sw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/pXIbMWVwTPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     
     <div class=" description-box">
         <h4>DESCRIPTION</h4>
@@ -59,19 +67,25 @@
        <div class="description-para">
 
         <p>The sensors chosen <br>
-          <span> Gyroscope and capacitieve buttons<br><br></span> 
+          <span> Gyroscope and the A B Buttons<br><br></span> 
             
             The outputs chosen<br>
-           <span> Bluetooth signal<br><br></span>
+           <span> MIDI Serial <br><br></span>
             
-            What you learned about the inputs and outputs chosen<br><br>
-             
+            <!-- What you learned about the inputs and outputs chosen<br><br>
+            <span> </span>
             
             What you learned about the programming interface<br><br>
-             
+            <span></span> -->
             
-            How your project works
-            
+            How your project works <br>
+            <span>There's a library in Makecode
+                and it outputs midi serial data through the usb connection
+                after that we used a driver called Hairless Midi
+                which parses serial usb data (the usb connected to microbit), next we need a way to output that data so a DAW can access it. Usually macs already have a midi software installed so it's easier.
+                But for the output we downloaded a virtual midi controler by Tobias Erichsen and passed the parsed data to that virtual line of MIDI.
+                Then in FL Studio (a music production software or DAW) we enabled the midi input
+                and then we specified what we wanted to do with the midi values there. In this case it was assigned to an EQ to show the effects showing visiually. But any value can be used. any knob or in any VST Plugin.</span>
             </p>
 
     </div>
@@ -93,7 +107,10 @@
             <h4>BLOCKS</h4>
     
             <div class="grey-box col s12">
-    
+                <img style="width: 55%;" class="blocks-image" src="https://media.discordapp.net/attachments/802107603353468951/824466353414864906/unknown.png" alt="" srcset="">
+                <img class="blocks-image" src="https://media.discordapp.net/attachments/802107603353468951/824466392887459880/unknown.png" alt="" srcset="">
+                <img class="blocks-image" src="https://media.discordapp.net/attachments/802107603353468951/824466442312220722/unknown.png" alt="" srcset="">
+                <img class="blocks-image" src="https://media.discordapp.net/attachments/802107603353468951/824466525469671436/unknown.png" alt="" srcset="">
             </div>
           
     </div>
